@@ -37,6 +37,7 @@ section {
 
 a {
     text-decoration: unset;
+    font-size: 0.8em;
 }
 
 a:hover {
@@ -50,4 +51,9 @@ main {
     align-items: center;
     justify-content: center;
     gap: 24px;
+}
+
+.headerText {
+    font-size: 4em;
+    font-family: 'Times New Roman', Times, serif';
 }
