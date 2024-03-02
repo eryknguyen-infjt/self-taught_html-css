@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
 }
 
 header {
@@ -56,4 +57,47 @@ main {
 .headerText {
     font-size: 4em;
     font-family: 'Times New Roman', Times, serif';
+}
+
+.searchBar {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 14px;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 24px;
+}
+
+.searchBar:hover {
+    border-color: transparent;
+    background: #334155;
+}
+
+input {
+    background: transparent;
+    outline: none;
+    border: unset;
+    color: beige;
+    flex: 1;
+}
+
+.searchButtonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.searchButtonsContainer button {
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: #334155;
+    border: px solid darkgrey;
+    color: white;
+    cursor: pointer;
+}
+
+.searchButtonsContainer button:hover {
+    border: 1px solid darkgrey;
 }
