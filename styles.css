@@ -7,7 +7,7 @@
 body {
     background: #0f172a;
     color: wheat; 
-    padding: 14px;
+    /* padding: 14px; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 14px;
 }
 
 nav,
@@ -26,6 +27,12 @@ section {
     display: flex;
     align-items: center;
     gap: 14px;
+}
+
+header section img {
+    max-width: 40px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
 }
 
 .whitelink {
@@ -52,6 +59,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 24px;
+    padding: 0;
 }
 
 .headerText {
@@ -75,12 +83,27 @@ main {
     background: #334155;
 }
 
+.iconButton {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
 input {
     background: transparent;
     outline: none;
     border: unset;
     color: beige;
     flex: 1;
+}
+
+.iconButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
 }
 
 .searchButtonsContainer {
@@ -100,4 +123,48 @@ input {
 
 .searchButtonsContainer button:hover {
     border: 1px solid darkgrey;
+}
+
+.languageSelection {
+    font-size: 0.9em;
+}
+
+.languageSelection span {
+    color: lightblue;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer > section {
+    padding: 14px;
+}
+
+footer > section:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid darkgray;
+}
+
+.footerStyles {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footerStyles a {
+    cursor: pointer;
+}
+
+@media (min-width: 540px) {
+    footer > section:last-child {
+        flex-direction: row;
+    }
+
+
 }
