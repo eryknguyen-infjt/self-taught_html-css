@@ -32,6 +32,10 @@ header, main, footer {
     width: 100%;
 }
 
+p {
+    font-size: 1.05em;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -48,24 +52,165 @@ nav {
 
 nav a {
     cursor: pointer;
+    text-decoration: none;
 }
 
 nav a:hover {
     opacity: 0.7;
 }
-main, section, .mainContainer {
+main, 
+section, 
+.nameContainer {
     display: flex;
     flex-direction: column;
 }
 
 main {
-    gap: 32px;
-}
-
-.nameContainer {
     gap: 64px;
+    padding-bottom: 64px;
 }
 
 section {
-    gap: 240px;
+    gap: 48px;
+}
+
+.nameContainer {
+    gap: 8px;
+}
+
+.statsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.imgContainer {
+    border-radius: 100%;
+    max-width: 114px;
+    overflow: hidden;
+}
+
+.imgContainer img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.stats > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stats div i {
+    font-size: 1.4em;
+}
+
+.stats div div {
+    display: grid;
+    place-items: center;
+    min-width: 40px;
+}
+
+.aboutMe {
+    line-height: 1.5em;
+}
+
+.outReach {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: auto;
+}
+
+.outReach:hover {
+    opacity: 0.7;
+}
+
+.outReach i {
+    transform: rotate(-45deg);
+}
+
+.projectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.headerText {
+    margin-bottom: 24px;
+}
+
+.projectItem {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.projectItem div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.projectItem>div:last-child {
+    aspect-ratio: 16/9;
+    max-width: 30%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.projectItem>div:last-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.linkContainer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.linkItem {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    grid-area: 14px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.linkItem:hover {
+    opacity: 0.7;
+}
+
+.linkItem p {
+    font-size: 0.9em;
+}
+
+
+
+@media (min-width: 640px) {
+    .statsContainer {
+        flex-direction: row;
+    }
+    .stats {
+        gap: 0px;
+    }
+
+    .aboutMe {
+        width: 80%;
+        margin-right: auto;
+    }
 }
