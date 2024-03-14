@@ -1,170 +1,149 @@
 * {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    background: #0f172a;
-    color: wheat; 
-    /* padding: 14px; */
+    color: white;
+    position: relative;
+
+    justify-content: center;
+    gap: 42px;
+    padding: 40px 14px;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    font-family: sans-serif, 'Times New Roman', Times, serif;
+    overflow-y: scroll;
+}
+
+.backgroundImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+}
+
+.backgroundImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px;
-}
-
-nav,
-section {
-    display: flex;
-    align-items: center;
+    text-align: center;
     gap: 14px;
 }
 
-header section img {
-    max-width: 40px;
-    border-radius: 50%;
-    border: 2px solid lightblue;
+body,
+header,
+main,
+.backgroundImg {
+    display: flex;
+    flex-direction: column;
 }
 
-.whitelink {
-    color: white;
+header img {
+    max-width: 120px;
+    width: 60%;
+    height: 70%;
+    margin: 0 auto;
+    border-radius: 100%;
+    margin-bottom: 8px; 
 }
 
-.greylink {
-    color: lightgrey;
+header mark {
+    border-radius: 4px;
+    padding: 2px 4px;
+    background: white;
+    color: #0f172a;
 }
 
-a {
-    text-decoration: unset;
+header h1 {
     font-size: 0.8em;
+    font-weight: 400;
 }
 
-a:hover {
-    text-decoration: underline;
+header p {
+    font-size: 0.9em;
+    font-weight: 700;
 }
 
 main {
-    flex: 1 ;
+    gap: 14px;
+}
+
+.link {
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 24px;
-    padding: 0;
-}
-
-.headerText {
-    font-size: 4em;
-    font-family: 'Times New Roman', Times, serif';
-}
-
-.searchBar {
-    display: flex;
-    width: 100%;
-    max-width: 700px;
+    justify-content: space-between;
+    padding: 8px 14px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    width: 420px;
+    max-width: 100%;
     margin: 0 auto;
-    gap: 14px;
-    border: 1px solid gray;
-    padding: 10px;
-    border-radius: 24px;
-}
-
-.searchBar:hover {
-    border-color: transparent;
-    background: #334155;
-}
-
-.iconButton {
-    background: transparent;
-    border: none;
+    transition-duration: 200ms;
+    cursor: pointer;
+    overflow: hidden;
     color: white;
-    font-size: 1.2em;
-    cursor: pointer;
+    text-decoration: none;
 }
 
-input {
-    background: transparent;
-    outline: none;
-    border: unset;
-    color: beige;
-    flex: 1;
+.link:hover {
+    border-color: skyblue;
 }
 
-.iconButtonContainer {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+.linkBackground {
+    position: absolute;
+    inset: 0;
+    background: #020617;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.link p {
+    font-size: 0.8em;
 
 }
 
-.searchButtonsContainer {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.searchButtonsContainer button {
-    padding: 6px 10px;
-    border-radius: 4px;
-    background: #334155;
-    border: px solid darkgrey;
-    color: white;
-    cursor: pointer;
-}
-
-.searchButtonsContainer button:hover {
-    border: 1px solid darkgrey;
-}
-
-.languageSelection {
-    font-size: 0.9em;
-}
-
-.languageSelection span {
-    color: lightblue;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-}
-
-
-footer > section {
-    padding: 14px;
-}
-
-footer > section:last-child {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-top: 1px solid darkgray;
-}
-
-.footerStyles {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.footerStyles a {
-    cursor: pointer;
-}
-
-@media (min-width: 540px) {
-    footer > section:last-child {
-        flex-direction: row;
+@media (min-width: 640px) {
+    body {
+        gap: 64px;
+        padding: 80px 14px;
     }
 
+    header,
+    main {
+        gap: 24px;
+    }
+
+    header img {
+        max-width: 200px;
+        padding-bottom: 24px;
+    }
+
+    header h1 {
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    header p {
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+
+    .link p {
+        font-size: 1.1em;
+    }
 
 }
